@@ -10,7 +10,12 @@ Os administradores do sistema podem adicionar, editar e remover lojas. Para isto
 
 Foi utilizada uma conta no Mailgun para envio dos emails. **O sistema não funciona com lojas que injetam conteúdo dinâmicamente utilizando JavaScript**.
 
-O sistema permite aos usuários: Fazerem registro, acessarem o sistema, criarem, editarem, apagarem alertas e verificarem preços manualmente. Os administradores podem criar, editar e excluírem lojas.
+O sistema permite ao usuário: 
+- Fazerem seu registro; 
+- Acessar o sistema; 
+- Criarem, editarem, apagarem alertas e verificarem preços manualmente.
+
+Os administradores podem realizar as atividades acima, além de criar, editar e excluírem lojas.
 
 Tecnologias: MongoDB, Python (Flask e Jinja2), HTML/CSS/Bootstrap, Mailgun.
 
