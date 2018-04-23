@@ -11,9 +11,9 @@ Os administradores do sistema podem adicionar, editar e remover lojas. Para isto
 Foi utilizada uma conta no Mailgun para envio dos emails. **O sistema não funciona com lojas que injetam conteúdo dinâmicamente utilizando JavaScript**.
 
 O sistema permite ao usuário: 
-- Fazerem seu registro; 
+- Fazer seu registro; 
 - Acessar o sistema; 
-- Criarem, editarem, apagarem alertas e verificarem preços manualmente.
+- Criar, editar, apagar alertas e verificar preços manualmente.
 
 Os administradores podem realizar as atividades acima, além de criar, editar e excluírem lojas.
 
