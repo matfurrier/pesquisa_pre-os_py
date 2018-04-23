@@ -15,7 +15,7 @@ O sistema permite ao usuário:
 - Acessar o sistema; 
 - Criar, editar, apagar alertas e verificar preços manualmente.
 
-Os administradores podem realizar as atividades acima, além de criar, editar e excluírem lojas.
+Os administradores podem realizar as atividades acima, além de criar, editar e excluir lojas.
 
 Tecnologias: MongoDB, Python (Flask e Jinja2), HTML/CSS/Bootstrap, Mailgun.
 
