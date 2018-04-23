@@ -12,7 +12,7 @@ Foi utilizada uma conta no Mailgun para envio dos emails. **O sistema não funci
 
 O sistema permite aos usuários: Fazerem registro, acessarem o sistema, criarem, editarem, apagarem alertas e verificarem preços manualmente. Os administradores podem criar, editar e excluírem lojas.
 
-Tecnologias: MongoDB, Python (Flask, Jinja2), HTML/CSS/Bootstrap, Mailgun.
+Tecnologias: MongoDB, Python (Flask e Jinja2), HTML/CSS/Bootstrap, Mailgun.
 
 ![Adicionar administrador](readme-files/home.png)
 
