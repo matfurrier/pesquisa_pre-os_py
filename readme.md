@@ -8,7 +8,7 @@ Os administradores do sistema podem adicionar, editar e remover lojas. Para isto
 
 ![Adicionar administrador](readme-files/administradores.png)
 
-Foi utilizada uma conta no Mailgun para envio dos emails. **O sistema não funciona com lojas que injeta conteúdo dinâmicamente utilizando JavaScript**.
+Foi utilizada uma conta no Mailgun para envio dos emails. **O sistema não funciona com lojas que injetam conteúdo dinâmicamente utilizando JavaScript**.
 
 O sistema permite aos usuários: Fazerem registro, acessarem o sistema, criarem, editarem, apagarem alertas e verificarem preços manualmente. Os administradores podem criar, editar e excluírem lojas.
 
