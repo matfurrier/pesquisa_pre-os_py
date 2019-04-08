@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="head-title">
+    <h1>Loja <small>{{ store.name }}</small></h1>
+    <p>Todas URLs desta loja têm que começar com <strong>{{ store.url_prefix }}</strong></p>
+    {% if session['email'] in config.ADMINS %}
+      <a class="btn btn-success" href="{{ url_for('stores.edit_store', store_id=store._id) }}" role="button">Editar Loja</a>
+      <a class="btn btn-success" href="{{ url_for('stores.delete_store', store_id=store._id) }}" role="button">Deletar Loja</a>
+    {% endif %}
+  </div>
+
+
+
+</div>
+{% endblock %}

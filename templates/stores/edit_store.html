@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h1 class="head-title">Editar Loja</h1>
+
+  <div class="form-size">
+    <form method="post">
+
+      <div class="form-group">
+        <label for="name">Nome da Loja</label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="Nome da Loja" value="{{ store.name }}">
+      </div>
+
+      <div class="form-group">
+        <label for="url-prefix">URL da Loja (Prefixo)</label>
+        <input type="text" class="form-control" name="url-prefix" id="url-prefix" placeholder="http://..." value="{{ store.url_prefix }}" aria-describedby="storeURLPrefixHelp">
+        <span id="storeURLPrefixHelp" class="help-block">Com quais caracteres as URLs para essa loja iniciam?</span>
+      </div>
+
+      <div class="form-group">
+        <label for="tag-name">Tag da loja</label>
+        <input type="text" class="form-control" name="tag-name" id="tag-name" placeholder="span" value="{{ store.tag_name }}" aria-describedby="storeTagNameHelp">
+        <span id="storeTagNameHelp" class="help-block">Qual é a tag HTML do item que contem o preço? (normalmente <code>span</code>)</span>
+      </div>
+
+      <div class="form-group">
+        <label for="query">Consulta</label>
+        <input type="text" class="form-control" name="query" id="query" placeholder='{"id": "price-now"}' value='{{ store.query | tojson }}' aria-describedby="queryHelp">
+        <span id="queryHelp" class="help-block">Qual a consulta JSON nós precisamos fazer para encontrar a tag que tem o preço? Lembre-se de usar aspas duplas!</span>
+      </div>
+
+      <button type="submit" class="btn btn-success">Editar</button>
+    </form>
+
+
+  </div>
+
+</div>
+{% endblock %}

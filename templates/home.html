@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">Pricing Service</h1>
+    <p class="lead">Nós pesquisamos lojas online e alertamos você assim que o seu preço limite for alcançado.</p>
+    <hr class="my-4">
+    <p>Apenas crie sua, adicione seus produtos e nós tomamos conta do resto.</p>
+    <p class="lead">
+      <a class="btn btn-success btn-lg" href="{{ url_for('users.register_user') }}" role="button">Criar Conta</a>
+    </p>
+  </div>
+</div>
+{% endblock %}

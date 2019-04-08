@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h1 class="head-title">Lista de lojas suportadas</h1>
+
+  <div class="list-group-item-action">
+    {% for store in stores %}
+    <a href="{{ url_for('stores.store_page', store_id=store._id)}}" class="list-group-item-link">
+    <h4 class="list-group-title">{{ store.name }}</h4>
+    <p class="list-group-item-text">Todas URLs desta loja têm que começar com <strong>{{ store.url_prefix }}</strong></p></a>
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+
+      </div>
+
+    </div>
+
+    {% endfor %}
+  </div>
+  {% if session['email'] in config.ADMINS %}
+    <a class="btn btn-success" href="{{ url_for('stores.create_store')}}">
+      <i class="fa fa-plus-circle" aria-hidden="true"></i> Criar Loja
+    </a>
+  {% endif %}
+</div>
+
+
+{% endblock %}

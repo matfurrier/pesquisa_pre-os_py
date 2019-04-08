@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h1 class="head-title">Seus Alertas</h1>
+    <hr>
+    <div class="list-group">
+      {% for alert in alerts %}
+        <a href="{{ url_for('alerts.get_alert_page', alert_id=alert._id) }}" class="list-group-item {{ 'list-group-item-action' if alert.active else 'list-group-item-warning'}}">
+        {{ '<i class="fa fa-minus-circle" aria-hidden="true"></i>'|safe if alert.active==False }}   Alerta para: {{ alert.item.name }}
+          <p>Último preço encontrado: <strong>{{ alert.item.price }}</strong><br />
+            Última verificação em <strong>{{ alert.last_checked.strftime("%d-%m-%Y às %H:%M") }}</strong>
+          </p>
+        </a>
+      {% endfor %}
+</div>
+<a class="btn btn-success" href="{{ url_for('alerts.create_alert')}}"><i class="fa fa-plus-circle" aria-hidden="true"></i> Criar novo</a>
+</div>
+{% endblock %}

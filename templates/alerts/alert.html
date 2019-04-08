@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h1 class="head-title">Alerta <small>para {{ alert.item.name }}</small></h1>
+  <hr>
+    <div class="head-title">
+      <p>Último preço encontrado: <strong>{{ alert.item.price }}</strong></p>
+      <p>Última verificação em <strong>{{ alert.last_checked.strftime("%d-%m-%Y às %H:%M") }}</strong></p>
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <a href="{{ alert.item.url }}" class="btn btn-success" role="button"><i class="fa fa-arrow-right" aria-hidden="true"></i> Visitar Site</a>
+          <a href="{{ url_for('alerts.edit_alert', alert_id=alert._id) }}" class="btn btn-success" role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar Alerta</a>
+          {% if alert.active == False %}
+          <a href="{{ url_for('alerts.activate_alert', alert_id=alert._id) }}" class="btn btn-success" role="button"><i class="fa fa-bell-o" aria-hidden="true"></i> Ativar Alerta</a>
+          <a href="{{ url_for('alerts.delete_alert', alert_id=alert._id) }}" class="btn btn-success" role="button"><i class="fa fa-bell-slash-o" aria-hidden="true"></i> Apagar Alerta</a>
+
+          {% else %}
+          <a href="{{ url_for('alerts.deactivate_alert', alert_id=alert._id) }}" class="btn btn-success" role="button"><i class="fa fa-bell-slash-o" aria-hidden="true"></i> Desativar Alerta</a>
+
+          {% endif %}
+
+          <a href="{{ url_for('alerts.check_alert_price', alert_id=alert._id) }}" class="btn btn-success" role="button"><i class="fa fa-search" aria-hidden="true"></i> Verificar Preço</a>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+</div>
+
+{% endblock %}
